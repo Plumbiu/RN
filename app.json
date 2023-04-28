@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "reactNative",
-    "slug": "reactNative",
+    "slug": "rn-learn",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,16 +15,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.plumbiu.rnlearn"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.plumbiu.rnlearn"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2e38b3f4-0ad9-4ebf-a2ee-6ef51b2d2314"
+      }
+    },
+    "owner": "plumbiu"
   }
 }

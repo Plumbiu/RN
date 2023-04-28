@@ -1,62 +1,51 @@
-import React, { useState } from 'react';
-import { Pressable, StyleSheet, Text, View } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native'
+import React, { useState } from 'react'
+import { Pressable } from 'react-native'
 
-const PressableDemo = () => {
-  const [timesPressed, setTimesPressed] = useState(0);
-
-  let textLog = '';
-  if (timesPressed > 1) {
-    textLog = timesPressed + 'x onPress';
-  } else if (timesPressed > 0) {
-    textLog = 'onPress';
-  }
-
+export default function PressableDemo() {
+  const [counter, setCounter] = useState(0)
   return (
     <View style={styles.container}>
       <Pressable
-        onPress={() => {
-          setTimesPressed((current) => current + 1);
-        }}
+        onPress={() => setCounter(counter + 1)}
+        onLongPress={() => setCounter(counter + 2)}
         style={({ pressed }) => [
           {
-            backgroundColor: pressed
-              ? 'rgb(210, 230, 255)'
-              : 'white'
-          },
-          styles.wrapperCustom
-        ]}>
+            backgroundColor: pressed ? 'rgba(120, 20, 240, 1)' : 'rgba(120, 20, 240, 0.5)',
+            borderRadius: 25
+          }
+        ]}
+      >
         {({ pressed }) => (
-          <Text style={styles.text}>
-            {pressed ? 'Pressed!' : 'Press Me'}
-          </Text>
+          <Text style={styles.textBtn}>{pressed ? 'Pressed!' : 'Press Me!'}</Text>
         )}
       </Pressable>
-      <View style={styles.logBox}>
-        <Text testID="pressable_press_console">{textLog}</Text>
+      <View style={styles.textContent}>
+        <Text>{counter ? `${ counter === 1 ? 'onPress' : `${counter}x onPress` }` : ''}</Text>
       </View>
     </View>
-  );
-};
-
+  )
+}
+const textBasicStyle = {
+  width: '100vw',
+  textAlign: 'center',
+  padding: 15,
+  fontSize: 25,
+  color: '#fff'
+}
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  text: {
-    fontSize: 16
+  textBtn: {
+    ...textBasicStyle
   },
-  wrapperCustom: {
-    borderRadius: 8,
-    padding: 6
-  },
-  logBox: {
-    padding: 20,
-    margin: 10,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: '#f0f0f0',
-    backgroundColor: '#f9f9f9'
+  textContent: {
+    ...textBasicStyle,
+    backgroundColor: 'rgba(200, 200, 200, .35)',
+    marginTop: 25,
+    fontSize: 20
   }
-});
-
-export default PressableDemo;
+})

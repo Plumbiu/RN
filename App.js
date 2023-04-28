@@ -15,6 +15,13 @@ import TouchableOpacityDemo from './src/components/TouchableOpacityDemo'
 import RefreshControlDemo from './src/components/RefreshControlDemo'
 import StatusBarDemp from './src/components/StatusBarDemp'
 import PressableDemo from './src/components/PressableDemo'
+import DrawerLayoutAndroidDemo from './src/components/DrawerLayoutAndroidDemo'
+import AlertDemo from './src/components/API/AlertDemo'
+import AnimatedDemo from './src/components/API/AnimatedDemo'
+import AppearanceDemo from './src/components/API/AppearanceDemo'
+import AppStateDemo from './src/components/API/AppStateDemo'
+import DimensionsDemo from './src/components/API/DimensionsDemo'
+import EasingDemo from './src/components/API/EasingDemo'
 
 export default function App() {
   return (
@@ -33,7 +40,14 @@ export default function App() {
       {/* <TouchableOpacityDemo /> */}
       {/* <RefreshControlDemo /> */}
       {/* <StatusBarDemp /> */}
-      <PressableDemo />
+      {/* <PressableDemo /> */}
+      {/* <DrawerLayoutAndroidDemo /> */}
+      {/* <AlertDemo /> */}
+      {/* <AnimatedDemo /> */}
+      {/* <AppearanceDemo /> */}
+      {/* <AppStateDemo /> */}
+      {/* <DimensionsDemo /> */}
+      <EasingDemo />
     </>
   )
 }
