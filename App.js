@@ -22,6 +22,13 @@ import AppearanceDemo from './src/components/API/AppearanceDemo'
 import AppStateDemo from './src/components/API/AppStateDemo'
 import DimensionsDemo from './src/components/API/DimensionsDemo'
 import EasingDemo from './src/components/API/EasingDemo'
+import KeyboardDemo from './src/components/API/KeyboardDemo'
+import PlatformDemo from './src/components/API/PlatformDemo'
+import LinkingDemo from './src/components/API/LinkingDemo'
+import PixelRatioDemo from './src/components/API/PixelRatioDemo'
+import ShareDemo from './src/components/API/ShareDemo'
+import UseColorSchemeDemo from './src/components/Hooks/UseColorSchemeDemo'
+import UseWindowDimensionsDemo from './src/components/Hooks/UseWindowDimensionsDemo'
 
 export default function App() {
   return (
@@ -47,7 +54,14 @@ export default function App() {
       {/* <AppearanceDemo /> */}
       {/* <AppStateDemo /> */}
       {/* <DimensionsDemo /> */}
-      <EasingDemo />
+      {/* <EasingDemo /> */}
+      {/* <KeyboardDemo /> */}
+      {/* <PlatformDemo /> */}
+      {/* <LinkingDemo /> */}
+      {/* <PixelRatioDemo /> */}
+      {/* <ShareDemo /> */}
+      {/* <UseColorSchemeDemo /> */}
+      <UseWindowDimensionsDemo />
     </>
   )
 }
